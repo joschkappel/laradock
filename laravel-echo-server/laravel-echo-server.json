@@ -1,12 +1,19 @@
 {
 	"authHost": "localhost",
 	"authEndpoint": "/broadcasting/auth",
-	"clients": [],
+	"clients": [
+		{
+			"appId": "dunkomatic",
+			"key": "44fad1c68075f07b8d72c8beaf59042d"
+		}
+	],
 	"database": "redis",
 	"databaseConfig": {
 		"redis": {
 			"port": "6379",
-			"host": "redis"
+			"host": "redis",
+			"db":"0",
+			"password":"secret_redis"
 		}
 	},
 	"devMode": true,
@@ -15,5 +22,12 @@
 	"protocol": "http",
 	"socketio": {},
 	"sslCertPath": "",
-	"sslKeyPath": ""
+	"sslKeyPath": "",
+    "apiOriginAllow":{
+		  "allowCors" : true,
+		  "allowOrigin" : "http://127.0.0.1",
+		  "allowMethods" : "GET, POST",
+		  "allowHeaders" : "Origin, Content-Type, X-Auth-Token, X-Requested-With, Accept, Authorization, X-CSRF-TOKEN, X-Socket-Id"
+		}
+	
 }
